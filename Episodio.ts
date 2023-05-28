@@ -1,5 +1,5 @@
-import { Serie } from "./Serie";
-import { Rol } from "./Rol";
+import { Serie } from "./Serie.js";
+import { Rol } from "./Rol.js";
 
 export class Episodio{
 
@@ -17,6 +17,10 @@ export class Episodio{
         this.serie=serie;
         this.director=director;
         this.actores=[];
+    }
 
+    Detalles(){
+        console.log(this.actores.length);
+        
     }
 }

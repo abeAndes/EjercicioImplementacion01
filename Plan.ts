@@ -1,4 +1,4 @@
-import { Plataforma } from "./Plataforma";
+import { Plataforma } from "./Plataforma.js";
 
 export class Plan{
 

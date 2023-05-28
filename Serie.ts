@@ -1,10 +1,11 @@
 
-import { Episodio } from "./Episodio";
-import { Categoria } from "./Categoria";
-import { Plataforma } from "./Plataforma";
+import { Episodio } from "./Episodio.js";
+import { Categoria } from "./Categoria.js";
+import { Plataforma } from "./Plataforma.js";
 
 export class Serie{
 
+    todas:string[]=[];
     nombre:string;
     imagen:string;
     episodios:Episodio[];
@@ -17,6 +18,13 @@ export class Serie{
         this.episodios=[];
         this.categorias=[];
         this.plataformas=[];
+        this.todas.push(this.nombre);
+
     }
 
+    Detalles (){
+        console.table("nombre: "+this.nombre+"\n imagen: "+this.imagen+"\n Cantidad de episodios: "+this.episodios.length+"\n Categorías: "+this.categorias.length+"\n Plataformas: "+this.plataformas.length);
+       
+    }
+    
 }

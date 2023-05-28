@@ -1,5 +1,5 @@
-import { Plan } from "./Plan";
-import { Serie } from "./Serie";
+import { Plan } from "./Plan.js";
+import { Serie } from "./Serie.js";
 
 export class Plataforma{
 
@@ -16,6 +16,10 @@ export class Plataforma{
 
     }
 
+    Detalles(){
+        console.log("nombre: "+this.nombre+"\n Acceso: "+this.URL+"\n Planes: "+this.planes.length+"\n Series: "+this.series.length);
+        
+    }
 
 
 }

@@ -1,4 +1,4 @@
-import { Rol } from "./Rol";
+import { Rol } from "./Rol.js";
 
 export class Persona{
 
