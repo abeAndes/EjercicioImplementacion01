@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <style> @import url("Style/Index.css");</style>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Semana 10</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+    <link rel='stylesheet' type='text/css' media='screen' href='/Style/Index.css'>
     <script>var exports = {};</script>
     <script type="module" src='dist/main.js' defer></script>
 </head>
 <body>
-    
+    <form>
+        <label>Ingrese cuantos números desea evaluar</label>
+        <br><br>
+        <input type="number" name="" id="a" placeholder="Un número" autofocus>
+        <br><br>
+        <button type="button" onclick="Arreglo(parseFloat(a.value))">Calcular</button>
+        <br><br>
+    </form>
 </body>
 </html>

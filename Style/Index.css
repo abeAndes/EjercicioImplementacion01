@@ -1,0 +1,24 @@
+body{
+    background-image: url(Fondo.jpg);
+    zoom: 250%;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+label{
+    color: black;
+    background-color: white;
+}
+form{
+    background-color:rgba(236, 230, 230, 0.732);
+    text-align: center;
+    width: 40%;
+    height: 10%;
+    margin: auto;
+    margin-bottom: center;
+}
+button{
+    border-radius: 20%;
+    background-color: rgba(153, 205, 50, 0.621);
+}
