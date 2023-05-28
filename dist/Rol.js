@@ -6,7 +6,8 @@ export class Rol {
         this.episodios = [];
     }
     Detalles() {
-        console.table("nombre: " + this.nombre + "\n Rol: " + this.rol + "\n Datos del individuo: " + this.persona + "\n Episodios en los que ha participado: " + this.episodios.length);
+        let Epi = this.episodios.map((Episodio => " " + Episodio.nombre));
+        console.table("nombre: " + this.nombre + "\n Rol: " + this.rol + "\n Datos del individuo: " + this.persona.nombre + " " + this.persona.imagen + " " + this.persona.descripcion + " " + this.persona.roles + "\n Episodios en los que ha participado: " + Epi);
     }
 }
 //# sourceMappingURL=Rol.js.map

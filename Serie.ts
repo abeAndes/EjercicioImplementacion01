@@ -3,9 +3,10 @@ import { Episodio } from "./Episodio.js";
 import { Categoria } from "./Categoria.js";
 import { Plataforma } from "./Plataforma.js";
 
+export var todasS:string[]=[];
+
 export class Serie{
 
-    todas:string[]=[];
     nombre:string;
     imagen:string;
     episodios:Episodio[];
@@ -18,13 +19,28 @@ export class Serie{
         this.episodios=[];
         this.categorias=[];
         this.plataformas=[];
-        this.todas.push(this.nombre);
-
+        todasS.push(nombre);
+                                                        
     }
 
     Detalles (){
-        console.table("nombre: "+this.nombre+"\n imagen: "+this.imagen+"\n Cantidad de episodios: "+this.episodios.length+"\n Categorías: "+this.categorias.length+"\n Plataformas: "+this.plataformas.length);
+        let Cat=this.categorias.map((Categoria=>" "+Categoria.nombre));
+        let Pla=this.plataformas.map((Plataforma=>" "+Plataforma.nombre));
+        console.table("nombre: "+this.nombre+"\n imagen: "+this.imagen+"\n Cantidad de episodios: "+this.episodios.length+"\n Categorías: "+Cat+"\n Plataformas: "+Pla);
        
+    }
+
+    Reparto(){
+        console.log("Nombre: "+this.nombre);
+        
+        let directores= this.episodios.map((Epi=>+" "+Epi.director.nombre));
+        let act= this.episodios.map((Act=>" "+Act.actores.map(Acts=>Acts.nombre)));
+        let cap = this.episodios.map(nom=>nom.nombre);
+        for (let i = 0; i < cap.length; i++) {
+            console.log("El capitulo: "+cap[i]+" Fue dirigido por: "+directores[i]+" Y conto con la actuación de: "+act[i]);            
+        }
+        
+        
     }
     
 }

@@ -5,6 +5,10 @@ import { Plataforma } from "./Plataforma.js";
 import { Plan } from "./Plan.js";
 import { Rol } from "./Rol.js";
 import { Categoria } from "./Categoria.js";
+import { todasS } from "./Serie.js";
+import { todasC } from "./Categoria.js";
+import { todasP } from "./Plataforma.js";
+
 
 //Personas
 
@@ -47,15 +51,10 @@ const ActorD5 = new Rol("PedroRA","Director",PedroA);
 //Series
 
 const HIMYM = new Serie("How i met your mother","Imagen");
-HIMYM.todas.push("HIMYM");
 const Grey = new Serie("Grey's Anatomy","Imagen");
-Grey.todas.push("Grey");
 const Californication = new Serie("Californication","Imagen");
-Californication.todas.push("Californication");
 const X = new Serie("X files","Imagen");
-X.todas.push("X");
 const Bad = new Serie("Breaking Bad","Imagen");
-Bad.todas.push("Bad");
 
 //Episodios
 
@@ -392,6 +391,18 @@ davidRA.Detalles();
 davidRD.Detalles();
 Grey.Detalles();
 HIMYM.Detalles();
+HIMYM.Reparto();
 Netflix.Detalles();
 
 
+function ListarS(){
+    console.log(todasS);
+}
+
+function ListarC(){
+    console.log(todasC);
+}
+
+function ListarP(){
+    console.log(todasP);
+}
