@@ -385,24 +385,106 @@ Paramount.planes.push(PremiumP);
 Paramount.planes.push(UltragoldP);
 
 
-//Total
+//llamados
+ListarS();
+ListarC();
+ListarP();
+DetallesA();
+DetallesD();
+DetallesS();
+Reparto();
+DetallesP();
+CrearS("Rick","Imagen");
+CrearC("Psyco");
+CrearA("Luis","Imagen","Actor","Recién Nacido");
+CrearD("Luis","Imagen","Director","Recién Nacido");
+CrearA("Marcos","Imagen","Actor","Recién Nacido");
+CrearD("Marcos","Imagen","Director","Recién Nacido");
+AgregarC(HIMYM,Terror);
+AgregarA(Grey,LauraRA);
+AgregarD(Grey,LauraRD);
+ListarS();
+ListarC();
+ListarP();
 
-davidRA.Detalles();
-davidRD.Detalles();
-Grey.Detalles();
-HIMYM.Detalles();
-HIMYM.Reparto();
-Netflix.Detalles();
 
 
-function ListarS(){
+//Funciones
+
+ function DetallesA(){
+    davidRA.Detalles();
+}
+
+ function DetallesD(){
+    davidRD.Detalles();
+}
+
+ function DetallesS(){
+    HIMYM.Detalles();
+}
+
+ function DetallesP(){
+    Netflix.Detalles();
+}
+
+
+ function Reparto(){
+    HIMYM.Reparto();
+}
+
+ function ListarS(){
     console.log(todasS);
 }
 
-function ListarC(){
+ function ListarC(){
     console.log(todasC);
 }
 
-function ListarP(){
+ function ListarP(){
     console.log(todasP);
+}
+
+function CrearS(nombre:string,imagen:string){
+    const Rick = new Serie(nombre,imagen);
+    Rick.Detalles();
+    ListarS();
+}
+
+function CrearC(nombre:string){
+    const Psyco = new Categoria(nombre);
+    ListarC();
+}
+ 
+function CrearPersona(nombre:string,imagen:string,descripcion:string):Persona{
+    const Npersona = new Persona(nombre,imagen,descripcion);
+    return Npersona;
+}
+
+function CrearA(nombre:string,imagen:string,rol:string,descripcion:string){
+    let persona = CrearPersona(nombre,imagen,descripcion);
+  const Nactor = new Rol(nombre,rol,persona);
+  Nactor.Detalles();
+}
+
+function CrearD(nombre:string,imagen:string,rol:string,descripcion:string){
+    let persona = CrearPersona(nombre,imagen,descripcion);
+  const NDirector = new Rol(nombre,rol,persona);
+  NDirector.Detalles();
+}
+
+function AgregarC(serie:Serie,Categoria:Categoria){
+    serie.categorias.push(Categoria);
+    serie.Detalles();
+}
+
+function AgregarA(serie:Serie,Actor:Rol){
+    serie.episodios.map(Epi=>Epi.actores.push(Actor));
+    console.log("Debido a que se agregara el actor a toda la serie su nombre será añadido a todos los episodios");
+    serie.Reparto();
+}
+
+function AgregarD(serie:Serie,Director:Rol){
+    serie.episodios.map(Epi=>Epi.director.nombre=Director.nombre);
+    console.log("Debido a que se agregara el director a toda la serie su nombre será añadido a todos los episodios borrando el nombre de otros directores en el caso de que exista");
+    serie.Reparto();
 }
