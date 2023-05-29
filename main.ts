@@ -394,12 +394,12 @@ DetallesD();
 DetallesS();
 Reparto();
 DetallesP();
-/* CrearS("Rick","Imagen");
+CrearS("Rick","Imagen");
 CrearC("Psyco");
 CrearA("Luis","Imagen","Actor","Recién Nacido");
 CrearD("Luis","Imagen","Director","Recién Nacido");
 CrearA("Marcos","Imagen","Actor","Recién Nacido");
-CrearD("Marcos","Imagen","Director","Recién Nacido"); */
+CrearD("Marcos","Imagen","Director","Recién Nacido");
 AgregarC(HIMYM,Terror);
 AgregarA(Grey,LauraRA);
 AgregarD(Grey,LauraRD);
@@ -525,12 +525,43 @@ DetallesReparto.onclick=Reparto;
 
 //Botones Creación
 
+//Crear Serie
 let CrearSerie:any;
-CrearSerie=document.getElementById("CrearSerie");
-CrearSerie.onclick=console.log("Funciona");
-
-/* let Nserie:any;
+CrearSerie=document.getElementById("CrearS");
+let Nserie:any;
 Nserie=document.getElementById("Nserie") as HTMLInputElement | null;
 let ISerie:any;
 ISerie=document.getElementById("ISerie") as HTMLInputElement | null;
-CrearSerie.onclick=CrearS(Nserie.value,ISerie.value),ListarS; */
+CrearSerie.onclick=CrearS(Nserie.value,ISerie.value);
+
+//Crear Categoria
+
+let CrearCategoria:any;
+CrearCategoria=document.getElementById("CrearC");
+let NCategoria:any;
+NCategoria= document.getElementById("NCategoria") as HTMLInputElement | null;
+CrearCategoria.onclick=CrearC(NCategoria.value);
+
+//Crear Actor
+
+let CrearActor:any;
+CrearActor=document.getElementById("CrearA");
+let NActor:any;
+NActor=document.getElementById("NActor") as HTMLInputElement | null;
+let IActor:any;
+NActor=document.getElementById("IActor") as HTMLInputElement | null;
+let DActor:any;
+NActor=document.getElementById("DActor") as HTMLInputElement | null;
+CrearActor.onclick=CrearA(NActor.value,IActor.value,"Actor",DActor.value);
+
+//Crear Director
+
+let CrearDirector:any;
+CrearDirector=document.getElementById("CrearD");
+let NDirector:any;
+NDirector=document.getElementById("NDirector") as HTMLInputElement | null;
+let IDirector:any;
+IDirector=document.getElementById("IDirector") as HTMLInputElement | null;
+let DDirector:any;
+DDirector=document.getElementById("DDirector") as HTMLInputElement | null;
+CrearDirector.onclick=CrearA(NDirector.value,IDirector.value,"Director",DDirector.value);

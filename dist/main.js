@@ -354,12 +354,12 @@ DetallesD();
 DetallesS();
 Reparto();
 DetallesP();
-/* CrearS("Rick","Imagen");
+CrearS("Rick", "Imagen");
 CrearC("Psyco");
-CrearA("Luis","Imagen","Actor","Recién Nacido");
-CrearD("Luis","Imagen","Director","Recién Nacido");
-CrearA("Marcos","Imagen","Actor","Recién Nacido");
-CrearD("Marcos","Imagen","Director","Recién Nacido"); */
+CrearA("Luis", "Imagen", "Actor", "Recién Nacido");
+CrearD("Luis", "Imagen", "Director", "Recién Nacido");
+CrearA("Marcos", "Imagen", "Actor", "Recién Nacido");
+CrearD("Marcos", "Imagen", "Director", "Recién Nacido");
 AgregarC(HIMYM, Terror);
 AgregarA(Grey, LauraRA);
 AgregarD(Grey, LauraRD);
@@ -454,12 +454,38 @@ let DetallesReparto;
 DetallesReparto = document.getElementById("Reparto");
 DetallesReparto.onclick = Reparto;
 //Botones Creación
+//Crear Serie
 let CrearSerie;
-CrearSerie = document.getElementById("CrearSerie");
-CrearSerie.onclick = console.log("Funciona");
-/* let Nserie:any;
-Nserie=document.getElementById("Nserie") as HTMLInputElement | null;
-let ISerie:any;
-ISerie=document.getElementById("ISerie") as HTMLInputElement | null;
-CrearSerie.onclick=CrearS(Nserie.value,ISerie.value),ListarS; */ 
+CrearSerie = document.getElementById("CrearS");
+let Nserie;
+Nserie = document.getElementById("Nserie");
+let ISerie;
+ISerie = document.getElementById("ISerie");
+CrearSerie.onclick = CrearS(Nserie.value, ISerie.value);
+//Crear Categoria
+let CrearCategoria;
+CrearCategoria = document.getElementById("CrearC");
+let NCategoria;
+NCategoria = document.getElementById("NCategoria");
+CrearCategoria.onclick = CrearC(NCategoria.value);
+//Crear Actor
+let CrearActor;
+CrearActor = document.getElementById("CrearA");
+let NActor;
+NActor = document.getElementById("NActor");
+let IActor;
+NActor = document.getElementById("IActor");
+let DActor;
+NActor = document.getElementById("DActor");
+CrearActor.onclick = CrearA(NActor.value, IActor.value, "Actor", DActor.value);
+//Crear Director
+let CrearDirector;
+CrearDirector = document.getElementById("CrearD");
+let NDirector;
+NDirector = document.getElementById("NDirector");
+let IDirector;
+IDirector = document.getElementById("IDirector");
+let DDirector;
+DDirector = document.getElementById("DDirector");
+CrearDirector.onclick = CrearA(NDirector.value, IDirector.value, "Director", DDirector.value);
 //# sourceMappingURL=main.js.map
