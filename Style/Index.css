@@ -1,5 +1,5 @@
 body{
-    background-image: url(Fondo.jpg);
+    background-image: url(sala-cine.jpg);
     zoom: 250%;
     height: 100%;
     width: 100%;
@@ -7,18 +7,23 @@ body{
     background-size: cover;
 }
 label{
-    color: black;
-    background-color: white;
+    color: white;
+    background-color: transparent;
 }
 form{
-    background-color:rgba(236, 230, 230, 0.732);
+    background-color:transparent;
     text-align: center;
-    width: 40%;
+    width: 80%;
     height: 10%;
     margin: auto;
     margin-bottom: center;
 }
 button{
-    border-radius: 20%;
-    background-color: rgba(153, 205, 50, 0.621);
+    color: white;
+    border-radius: 30%;
+    background-color: rgba(205, 50, 63, 0.905);
+}
+a{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.727);
 }

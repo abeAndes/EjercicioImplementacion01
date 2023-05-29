@@ -354,12 +354,12 @@ DetallesD();
 DetallesS();
 Reparto();
 DetallesP();
-CrearS("Rick", "Imagen");
+/* CrearS("Rick","Imagen");
 CrearC("Psyco");
-CrearA("Luis", "Imagen", "Actor", "Recién Nacido");
-CrearD("Luis", "Imagen", "Director", "Recién Nacido");
-CrearA("Marcos", "Imagen", "Actor", "Recién Nacido");
-CrearD("Marcos", "Imagen", "Director", "Recién Nacido");
+CrearA("Luis","Imagen","Actor","Recién Nacido");
+CrearD("Luis","Imagen","Director","Recién Nacido");
+CrearA("Marcos","Imagen","Actor","Recién Nacido");
+CrearD("Marcos","Imagen","Director","Recién Nacido"); */
 AgregarC(HIMYM, Terror);
 AgregarA(Grey, LauraRA);
 AgregarD(Grey, LauraRD);
@@ -428,4 +428,38 @@ function AgregarD(serie, Director) {
     console.log("Debido a que se agregara el director a toda la serie su nombre será añadido a todos los episodios borrando el nombre de otros directores en el caso de que exista");
     serie.Reparto();
 }
+//Botones Consulta
+let ListarSeries;
+ListarSeries = document.getElementById("ListarS");
+ListarSeries.onclick = ListarS;
+let ListarCategorias;
+ListarCategorias = document.getElementById("ListarC");
+ListarCategorias.onclick = ListarC;
+let ListarPlataformas;
+ListarPlataformas = document.getElementById("ListarP");
+ListarPlataformas.onclick = ListarP;
+let DetallesSeries;
+DetallesSeries = document.getElementById("DetallesS");
+DetallesSeries.onclick = DetallesS;
+let DetallesPlataformas;
+DetallesPlataformas = document.getElementById("DetallesP");
+DetallesPlataformas.onclick = DetallesP;
+let DetallesActores;
+DetallesActores = document.getElementById("DetallesA");
+DetallesActores.onclick = DetallesA;
+let DetallesDirectores;
+DetallesDirectores = document.getElementById("DetallesD");
+DetallesDirectores.onclick = DetallesD;
+let DetallesReparto;
+DetallesReparto = document.getElementById("Reparto");
+DetallesReparto.onclick = Reparto;
+//Botones Creación
+let CrearSerie;
+CrearSerie = document.getElementById("CrearSerie");
+CrearSerie.onclick = console.log("Funciona");
+/* let Nserie:any;
+Nserie=document.getElementById("Nserie") as HTMLInputElement | null;
+let ISerie:any;
+ISerie=document.getElementById("ISerie") as HTMLInputElement | null;
+CrearSerie.onclick=CrearS(Nserie.value,ISerie.value),ListarS; */ 
 //# sourceMappingURL=main.js.map
